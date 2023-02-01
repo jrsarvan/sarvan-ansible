@@ -1,0 +1,9 @@
+---
+- hosts: amazon-linux
+  become: yes
+  tasks:
+    - name: Install utilities
+      yum:
+        name: "{{ item  }}"
+        state: present
+      with_items: ["git,nano,tree,wget"]

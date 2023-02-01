@@ -1,0 +1,12 @@
+---
+- hosts: ubuntu
+  become: yes 
+  tasks:
+    - name: Using copy module copy the content
+      copy: 
+        src: /home/ansible/playbooks/ubuntuuser.sh
+        dest: /tmp/ubuntuuser.sh
+    - name: Now exe the shell in ubuntu machine
+      shell: sh /tmp/ubuntuuser.sh
+      become: yes
+      

@@ -1,0 +1,12 @@
+---
+- hosts: redhat
+  become: yes
+  tasks:
+  - name: Install apache server in redhat
+    yum:
+      name: httpd
+      state: present
+  - name: Start the service of httpd
+    service:
+      name: httpd
+      state: started

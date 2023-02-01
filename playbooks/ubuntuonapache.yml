@@ -1,0 +1,8 @@
+---
+- hosts: ubuntu
+  become: yes
+  tasks:
+  - name: This will install apache2 in ubuntu
+    apt:
+      name: apache2
+      state: present

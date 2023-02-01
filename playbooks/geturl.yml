@@ -1,0 +1,8 @@
+---
+- hosts: redhat
+  become: yes
+  tasks:
+    - name: Download the content from url to remote system
+      get_url:
+        url: https://sg.mirror.servanamanaged.com/jenkins/war-stable/2.375.2/jenkins.war
+        dest: /home/ec2-user/jenkins.war

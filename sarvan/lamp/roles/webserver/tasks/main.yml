@@ -1,0 +1,14 @@
+---
+# tasks file for webserver
+- name: Install apache in ubuntu
+  apt:
+    name: apache2
+    state: present
+  when: ansible_os_family  == "Debian"
+- name: Install apache in Redhat
+  yum:
+    name: httpd
+    state: present
+  when: ansible_os_family  == "RedHat"
+  notify:
+    -restart httpd

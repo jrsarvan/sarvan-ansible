@@ -1,0 +1,20 @@
+---
+# New user create test from here
+- name: test - Create a new Zabbix user with check_mode and diff
+  zabbix_user:
+    server_url: "{{ zabbix_server_url }}"
+    login_user: "{{ zabbix_login_user }}"
+    login_password: "{{ zabbix_login_password }}"
+    alias: example1
+    name: example
+    surname: test
+    usrgrps:
+      - Guests
+    passwd: password
+  check_mode: yes
+  diff: yes
+  register: create_zabbix_user_result
+
+- assert:
+    that:
+      - create_zabbix_user_result.changed is sameas true

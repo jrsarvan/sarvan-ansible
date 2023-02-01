@@ -1,0 +1,22 @@
+---
+- hosts: ubuntu
+  become: yes
+  tasks:
+    - name: install tomcat 9 in ubuntu machines
+      apt:
+        name: "{{ packagename }}"
+        state: present
+      notify: 
+        - restart tomcat
+
+    - name: copy files to remote
+      copy:
+        src: /home/ansible/playbooks/new
+        dest: "{{  destcopy  }}"
+      notify: 
+        - restart tomcat
+  handlers:
+      - name: restart tomcat
+        service:
+          name: "{{ packagename }}"
+          state: restarted

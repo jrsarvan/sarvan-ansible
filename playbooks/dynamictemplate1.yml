@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: using dynamic templates
+      template:
+        src: firsttemplate.j2
+        dest: /tmp/firsttemplate

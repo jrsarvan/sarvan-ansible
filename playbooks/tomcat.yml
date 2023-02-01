@@ -1,0 +1,9 @@
+---
+- hosts: ubuntu
+  become: yes
+  tasks:
+  - name: Tomcat 9 is installing in ubuntu20
+    apt:
+      name: tomcat9
+      state: present
+      update_cache: yes

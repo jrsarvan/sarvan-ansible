@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: create userin all machines
+      user:
+        name: tomcat
+        state: present
+
+    - name: Create one group
+      group:
+        name: tomcat
+        state: present

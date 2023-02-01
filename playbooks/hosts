@@ -1,0 +1,10 @@
+[ubuntu]
+172.31.32.223 ansible_password=Test@1234567
+172.31.36.160 ansible_password=Test@1234567
+
+[amazon-linux]
+172.31.40.167
+172.31.32.103
+
+[redhat]
+172.31.47.187

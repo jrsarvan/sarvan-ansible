@@ -1,0 +1,12 @@
+---
+- hosts: ubuntu
+  become: yes
+  tasks:
+    - name: using dynamic templates
+      template:
+        src: firsttemplate.j2
+        dest: /tmp/firsttemplate
+    - name: second template dynamic
+      template:
+        src: second.j2
+        dest: /tmp/second

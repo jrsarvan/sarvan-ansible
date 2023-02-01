@@ -1,0 +1,12 @@
+---
+- hosts: redhat
+  become: yes
+  tasks:
+    - name: Copy Module
+      copy:
+        src: /home/ansible/playbooks/rhuser.sh
+        dest: /home/ec2-user/rhuser.sh
+        mode: '0777'
+    - name: Execute the shell script
+      command: sh /home/ec2-user/rhuser.sh
+      become: yes

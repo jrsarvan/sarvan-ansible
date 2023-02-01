@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: using basic templates to copy static content
+      template:
+        src: test.j2
+        dest: /tmp/test

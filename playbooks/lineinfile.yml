@@ -1,0 +1,17 @@
+---
+- hosts: amazon-linux
+  become: yes
+  tasks:
+    - name: first copy the content from server to remote
+      copy:
+        src: /etc/ansible/ansible.cfg
+        dest: "{{ destcopy }}"
+
+    - name: Edit the file using lineinfile
+      lineinfile:
+        path: /tmp/ansible.cfg
+        regexp: '^[colors]'
+        insertafter: '^[colors]'
+        line: '#New color is RED'
+        
+

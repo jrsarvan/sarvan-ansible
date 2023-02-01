@@ -1,0 +1,32 @@
+{
+ "collection_info": {
+  "namespace": "sky_joker",
+  "name": "zabbix",
+  "version": "0.1.0",
+  "authors": [
+   "Dusan Matejka (@D3DeFi)",
+   "sky-joker (@sky-joker)"
+  ],
+  "readme": "README.md",
+  "tags": [
+   "monitoring",
+   "zabbix"
+  ],
+  "description": "Collection allowing to configure resources in Zabbix monitoring system",
+  "license": [],
+  "license_file": "LICENSE",
+  "dependencies": {},
+  "repository": "https://github.com/sky-joker/community.zabbix-sample1-ci.git",
+  "documentation": "https://github.com/sky-joker/community.zabbix-sample1-ci.git",
+  "homepage": "https://github.com/sky-joker/community.zabbix-sample1-ci.git",
+  "issues": "https://github.com/sky-joker/community.zabbix-sample1-ci/issues"
+ },
+ "file_manifest_file": {
+  "name": "FILES.json",
+  "ftype": "file",
+  "chksum_type": "sha256",
+  "chksum_sha256": "1c18b9762a4fa39be1811e2ec33b43894bcdbdafeb67d378cf3c9179b39605a8",
+  "format": 1
+ },
+ "format": 1
+}

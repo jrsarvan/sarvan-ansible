@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: install apache server in redhat
+      yum:
+        name: apache
+        state: present
+        when: ansible_facts['os_family'] == "RedHat"
+    - name: install apache in ubuntu
+      apt:
+        name: nginx
+        state: present
+        when: ansible_os_family == "Debian"

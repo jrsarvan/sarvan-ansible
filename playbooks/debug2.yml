@@ -1,0 +1,10 @@
+---
+- hosts: amazon-linux
+  tasks:
+    - name: execute the linux commands
+      command: df -h
+      register: cmd_content
+    - name: print variables result without error
+      debug:
+        msg: "{{ cmd_content.stdout }}"
+      when: cmd_content.stderr == ""
